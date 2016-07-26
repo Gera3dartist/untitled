@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - wiki_db@localhost" uuid="aad50560-25f0-425e-8cb4-ce549e548c32">
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-pattern>wiki_db.pg_catalog wiki_db.public</schema-pattern>
+      <default-schemas>wiki_db.pg_catalog wiki_db.public</default-schemas>
+    </data-source>
+  </component>
+</project>

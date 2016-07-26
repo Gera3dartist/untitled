@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="71301790">
+    <data-source source="LOCAL" name="PostgreSQL - wiki_db@localhost" uuid="aad50560-25f0-425e-8cb4-ce549e548c32">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5434/wiki_db</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
