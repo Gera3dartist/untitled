@@ -1873,16 +1873,39 @@
       <index name="django_session_de54fa62" unique="false" columns="expire_date"/>
       <index name="django_session_session_key_39f23f7a4abfc8ca_like" unique="false" columns="session_key"/>
     </table>
-    <table name="wiki_page_table" schema="public" catalog="wiki_db" type="TABLE">
-      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnd2lraV9wYWdlX3RhYmxlX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
-      <column name="title" sqlType="varchar" precision="128" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+    <table name="wiki_page_storage" schema="public" catalog="wiki_db" type="TABLE">
+      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnd2lraV9wYWdlX3N0b3JhZ2VfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <column name="title" sqlType="varchar" precision="128" scale="0" nullable="true" jdbcType="12"/>
       <column name="text" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="is_current" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7" def="ZmFsc2U="/>
       <column name="created" sqlType="timestamptz" precision="35" scale="6" nullable="false" jdbcType="93"/>
       <column name="updated" sqlType="timestamptz" precision="35" scale="6" nullable="false" jdbcType="93"/>
-      <primary-key name="wiki_page_table_pkey" columns="id"/>
+      <primary-key name="wiki_page_storage_pkey" columns="id"/>
+      <exported-key name="wiki_page_versions_page_id_fkey" table="wiki_page_versions" schema="public" catalog="wiki_db" columns="page_id"/>
     </table>
-    <table name="wiki_page_table_id_seq" schema="public" catalog="wiki_db" type="SEQUENCE">
+    <table name="wiki_page_storage_id_seq" schema="public" catalog="wiki_db" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="wiki_page_versions" schema="public" catalog="wiki_db" type="TABLE">
+      <column name="id" sqlType="bigserial" precision="19" scale="0" nullable="false" jdbcType="-5" def="bmV4dHZhbCgnd2lraV9wYWdlX3ZlcnNpb25zX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="page_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="title" sqlType="varchar" precision="128" scale="0" nullable="true" jdbcType="12"/>
+      <column name="text" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="is_current" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7" def="ZmFsc2U="/>
+      <column name="created" sqlType="timestamptz" precision="35" scale="6" nullable="false" jdbcType="93"/>
+      <primary-key name="wiki_page_versions_pkey" columns="id"/>
+      <foreign-key name="wiki_page_versions_page_id_fkey" columns="page_id" ref-table="wiki_page_storage" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="wiki_page_versions_id_seq" schema="public" catalog="wiki_db" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>

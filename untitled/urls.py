@@ -13,20 +13,15 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from core.routers import CoreRouter
 from django.conf.urls import url, include
-from django.contrib import admin
-from rest_framework import routers
-from rest_framework.routers import Route
 from wiki.views import WikiViewSet
 
-router = routers.DefaultRouter()
+router = CoreRouter()
 
 
-router.register(r'wiki', WikiViewSet, base_name='wikipage')
+router.register(r'pages', WikiViewSet, base_name='wikipage')
 urlpatterns = [
-    url(r'^', include(router.urls, namespace='wiki-manage')),
+    url(r'^wiki/', include(router.urls, namespace='wiki-manage')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
-#     url(r'^manage/', include(router.urls, namespace='manage')),
-#     ''
-# ]
