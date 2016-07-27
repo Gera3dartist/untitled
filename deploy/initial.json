@@ -1,0 +1,386 @@
+[
+{
+    "pk": 1,
+    "fields": {
+        "name": "log entry",
+        "app_label": "admin",
+        "model": "logentry"
+    },
+    "model": "contenttypes.contenttype"
+},
+{
+    "pk": 2,
+    "fields": {
+        "name": "permission",
+        "app_label": "auth",
+        "model": "permission"
+    },
+    "model": "contenttypes.contenttype"
+},
+{
+    "pk": 3,
+    "fields": {
+        "name": "group",
+        "app_label": "auth",
+        "model": "group"
+    },
+    "model": "contenttypes.contenttype"
+},
+{
+    "pk": 4,
+    "fields": {
+        "name": "user",
+        "app_label": "auth",
+        "model": "user"
+    },
+    "model": "contenttypes.contenttype"
+},
+{
+    "pk": 5,
+    "fields": {
+        "name": "content type",
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    },
+    "model": "contenttypes.contenttype"
+},
+{
+    "pk": 6,
+    "fields": {
+        "name": "session",
+        "app_label": "sessions",
+        "model": "session"
+    },
+    "model": "contenttypes.contenttype"
+},
+{
+    "pk": 7,
+    "fields": {
+        "name": "wiki page",
+        "app_label": "wiki",
+        "model": "wikipage"
+    },
+    "model": "contenttypes.contenttype"
+},
+{
+    "pk": 8,
+    "fields": {
+        "name": "wiki page versions",
+        "app_label": "wiki",
+        "model": "wikipageversions"
+    },
+    "model": "contenttypes.contenttype"
+},
+{
+    "pk": 1,
+    "fields": {
+        "created": "2016-07-26T21:44:27.217Z",
+        "text": "some wiki page",
+        "title": "My first wiki page",
+        "updated": "2016-07-26T21:44:27.218Z"
+    },
+    "model": "wiki.wikipage"
+},
+{
+    "pk": 2,
+    "fields": {
+        "created": "2016-07-26T21:45:32.612Z",
+        "text": "and another one",
+        "title": "My first wiki page",
+        "updated": "2016-07-27T00:06:49.991Z"
+    },
+    "model": "wiki.wikipage"
+},
+{
+    "pk": 3,
+    "fields": {
+        "created": "2016-07-26T21:46:18.466Z",
+        "text": "and something else",
+        "title": "My first wiki page",
+        "updated": "2016-07-26T22:33:46.931Z"
+    },
+    "model": "wiki.wikipage"
+},
+{
+    "pk": 1,
+    "fields": {
+        "page": null,
+        "is_current": true,
+        "created": "2016-07-26T21:44:27.230Z",
+        "text": "some wiki page",
+        "title": "My first wiki page"
+    },
+    "model": "wiki.wikipageversions"
+},
+{
+    "pk": 2,
+    "fields": {
+        "page": 2,
+        "is_current": false,
+        "created": "2016-07-26T21:45:32.615Z",
+        "text": "some wiki page",
+        "title": "My first wiki page"
+    },
+    "model": "wiki.wikipageversions"
+},
+{
+    "pk": 3,
+    "fields": {
+        "page": 3,
+        "is_current": false,
+        "created": "2016-07-26T21:46:18.478Z",
+        "text": "some wiki page",
+        "title": "My second wiki page"
+    },
+    "model": "wiki.wikipageversions"
+},
+{
+    "pk": 4,
+    "fields": {
+        "page": 2,
+        "is_current": true,
+        "created": "2016-07-26T22:30:11.989Z",
+        "text": "and another one",
+        "title": "My first wiki page"
+    },
+    "model": "wiki.wikipageversions"
+},
+{
+    "pk": 5,
+    "fields": {
+        "page": 2,
+        "is_current": false,
+        "created": "2016-07-26T22:33:29.247Z",
+        "text": "and something else",
+        "title": "My first wiki page"
+    },
+    "model": "wiki.wikipageversions"
+},
+{
+    "pk": 6,
+    "fields": {
+        "page": 3,
+        "is_current": true,
+        "created": "2016-07-26T22:33:46.949Z",
+        "text": "and something else",
+        "title": "My first wiki page"
+    },
+    "model": "wiki.wikipageversions"
+},
+{
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 4,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 5,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 6,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 7,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 8,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 9,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 10,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 11,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 12,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 16,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 17,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 18,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 19,
+    "fields": {
+        "name": "Can add wiki page",
+        "content_type": 7,
+        "codename": "add_wikipage"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 20,
+    "fields": {
+        "name": "Can change wiki page",
+        "content_type": 7,
+        "codename": "change_wikipage"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 21,
+    "fields": {
+        "name": "Can delete wiki page",
+        "content_type": 7,
+        "codename": "delete_wikipage"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 22,
+    "fields": {
+        "name": "Can add wiki page versions",
+        "content_type": 8,
+        "codename": "add_wikipageversions"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 23,
+    "fields": {
+        "name": "Can change wiki page versions",
+        "content_type": 8,
+        "codename": "change_wikipageversions"
+    },
+    "model": "auth.permission"
+},
+{
+    "pk": 24,
+    "fields": {
+        "name": "Can delete wiki page versions",
+        "content_type": 8,
+        "codename": "delete_wikipageversions"
+    },
+    "model": "auth.permission"
+}
+]
